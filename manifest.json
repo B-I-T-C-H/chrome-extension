@@ -1,0 +1,29 @@
+{
+  "name": "BITCH Index Tallied from Comment History",
+  "version": "0.0.0.1",
+  "author": "robertch, mau, yczeng",
+  "manifest_version": 2,
+  "description": "",
+  "permissions": [
+    "https://www.reddit.com/*",
+    "http://www.reddit.com/*",
+    "https://web.reddit.com/*",
+    "http://web.reddit.com/*"
+  ],
+
+  // "icons": {
+  //   "128": "images/hacker_news.png",
+  //   "32": "images/hacker_news.png"
+  // },
+
+  // "browser_action": {
+  //   "default_icon": "images/hacker_news.png"
+  // },
+  "content_scripts": [
+    {
+        "matches": ["http://www.reddit.com/*", "https://www.reddit.com/*","http://web.reddit.com/*","https://web.reddit.com/*"],
+        "js" : ["script.js"],
+        "run_at" : "document_start"
+    }
+  ]
+}
